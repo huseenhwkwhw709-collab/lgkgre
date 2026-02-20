@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منيو مطعم آشور | Ashor Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-overlay">
+            <div class="logo-container">
+                <img src="https://cdn-icons-png.flaticon.com/512/3170/3170733.png" alt="شعار المطعم" class="logo">
+                <h1>مطعم آشور</h1>
+                <p>أشهى المأكولات والمشروبات</p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="categories-nav">
+        <ul class="categories-list" id="category-list">
+            </ul>
+    </nav>
+
+    <main class="menu-container" id="menu-container">
+        </main>
+
+    <div class="floating-cart" id="cart-btn" onclick="toggleCart()">
+        <div class="cart-info">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <span class="cart-badge" id="cart-count">0</span>
+        </div>
+        <span class="cart-total-float" id="cart-total-float">0 د.ع</span>
+    </div>
+
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>سلة الطلبات <i class="fa-solid fa-cart-shopping"></i></h2>
+                <button class="close-btn" onclick="toggleCart()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <div class="cart-items" id="cart-items">
+                </div>
+            
+            <div class="cart-footer">
+                <div class="customer-info" style="margin-bottom: 15px;">
+                    <input type="text" id="cust-name" placeholder="اسمك الكامل" style="width: 100%; padding: 10px; margin-bottom: 8px; border-radius: 8px; border: 1px solid #dcdde1; font-family: 'Tajawal', sans-serif; font-size: 15px;">
+                    <input type="tel" id="cust-phone" placeholder="رقم الهاتف" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #dcdde1; font-family: 'Tajawal', sans-serif; font-size: 15px;">
+                </div>
+                <div class="total-price-container">
+                    <span>المجموع الكلي:</span>
+                    <span id="total-price" class="total-price">0 د.ع</span>
+                </div>
+                <button class="checkout-btn" onclick="sendOrderTelegram()">
+                    تأكيد الطلب تلجرام <i class="fa-brands fa-telegram"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
